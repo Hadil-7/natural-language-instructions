@@ -1,0 +1,7 @@
+# Exact direct package versions used for the checked-in reports (Python 3.12.14).
+# Install the CPU torch wheel first using the README command when appropriate.
+sentence-transformers==5.7.0
+scikit-learn==1.9.1
+transformers==5.21.0
+numpy==2.5.4
+torch==2.14.1
