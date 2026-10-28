@@ -1,0 +1,65 @@
+id,text,label,category
+forward_01,Please go straight,MOVE_FORWARD,paraphrase
+forward_02,Keep going ahead,MOVE_FORWARD,paraphrase
+forward_03,Can you advance a little?,MOVE_FORWARD,polite_command
+forward_04,Proceed forward please,MOVE_FORWARD,paraphrase
+forward_05,Walk ahead slowly,MOVE_FORWARD,modifier
+forward_06,Move straight on for a bit,MOVE_FORWARD,modifier
+forward_07,Take one step forwards,MOVE_FORWARD,modifier
+forward_08,Continue in the forward direction,MOVE_FORWARD,paraphrase
+backward_01,Reverse please,MOVE_BACKWARD,paraphrase
+backward_02,Could you back up?,MOVE_BACKWARD,polite_command
+backward_03,Please take a step backward,MOVE_BACKWARD,modifier
+backward_04,Retreat a short distance,MOVE_BACKWARD,paraphrase
+backward_05,Move in the reverse direction,MOVE_BACKWARD,paraphrase
+backward_06,Go backwards slowly,MOVE_BACKWARD,modifier
+backward_07,Walk a little way back,MOVE_BACKWARD,paraphrase
+backward_08,Step back please,MOVE_BACKWARD,paraphrase
+left_01,Please turn to your left,TURN_LEFT,paraphrase
+left_02,Could you rotate left?,TURN_LEFT,polite_command
+left_03,Make a turn towards the left side,TURN_LEFT,paraphrase
+left_04,Pivot left a little,TURN_LEFT,modifier
+left_05,Steer towards your left,TURN_LEFT,paraphrase
+left_06,Turn ninety degrees left,TURN_LEFT,modifier
+left_07,Face the left side,TURN_LEFT,paraphrase
+left_08,Please make a left turn,TURN_LEFT,paraphrase
+right_01,Please turn to your right,TURN_RIGHT,paraphrase
+right_02,Could you rotate right?,TURN_RIGHT,polite_command
+right_03,Make a turn towards the right side,TURN_RIGHT,paraphrase
+right_04,Pivot right a little,TURN_RIGHT,modifier
+right_05,Steer towards your right,TURN_RIGHT,paraphrase
+right_06,Turn ninety degrees right,TURN_RIGHT,modifier
+right_07,Face the right side,TURN_RIGHT,paraphrase
+right_08,Please make a right turn,TURN_RIGHT,paraphrase
+stop_01,Halt now please,STOP,paraphrase
+stop_02,Please stop moving,STOP,paraphrase
+stop_03,Stay where you are,STOP,paraphrase
+stop_04,Remain in the same spot,STOP,paraphrase
+stop_05,Keep completely still,STOP,modifier
+stop_06,Bring yourself to a halt,STOP,paraphrase
+stop_07,Please do not move,STOP,supported_stop_negation
+stop_08,Don't move!,STOP,supported_stop_negation
+unknown_01,Make me a sandwich,UNKNOWN,unrelated
+unknown_02,What is the weather today?,UNKNOWN,unrelated
+unknown_03,Open the kitchen window,UNKNOWN,unsupported_action
+unknown_04,Take a photo of the room,UNKNOWN,unsupported_action
+unknown_05,Play some music,UNKNOWN,unrelated
+unknown_06,Pick up the red cup,UNKNOWN,unsupported_action
+unknown_07,The meeting starts at noon,UNKNOWN,unrelated
+unknown_08,Translate this paragraph into French,UNKNOWN,unrelated
+unknown_09,Do not turn left,UNKNOWN,negation
+unknown_10,Don't go forward,UNKNOWN,negation
+unknown_11,Never reverse,UNKNOWN,negation
+unknown_12,Turn right without moving,UNKNOWN,negation
+unknown_13,Avoid turning to your left,UNKNOWN,negation
+unknown_14,You mustn't move backwards,UNKNOWN,negation
+unknown_15,Turn left and then turn right,UNKNOWN,multi_action
+unknown_16,Move forward then stop,UNKNOWN,multi_action
+unknown_17,"Go backwards, turn left",UNKNOWN,multi_action
+unknown_18,First turn right; next halt,UNKNOWN,multi_action
+unknown_19,Advance before turning left,UNKNOWN,multi_action
+unknown_20,Turn left or right,UNKNOWN,ambiguous
+unknown_21,Maybe go forward,UNKNOWN,ambiguous
+unknown_22,If the path is clear go ahead,UNKNOWN,conditional
+unknown_23,Right is the correct answer,UNKNOWN,non_command_direction_word
+unknown_24,I left my keys at home,UNKNOWN,non_command_direction_word
