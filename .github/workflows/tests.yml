@@ -1,0 +1,25 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  baseline-and-scope:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run deterministic unit tests without model downloads
+        run: python -m unittest discover -s tests -v
+      - name: Generate lexical baseline evaluation
+        run: python main.py evaluate --backend baseline --output baseline-report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: baseline-evaluation
+          path: baseline-report.json
