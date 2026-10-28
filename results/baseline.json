@@ -1,0 +1,1589 @@
+{
+  "dataset": "data/held_out.csv",
+  "backend": "baseline",
+  "model": "tf-idf-reference-baseline",
+  "model_loading": null,
+  "model_revision": null,
+  "environment": {
+    "python": "3.12.14",
+    "packages": {
+      "sentence-transformers": "5.7.0",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.1+cpu",
+      "transformers": "5.21.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "threshold": 0.35,
+  "min_margin": 0.04,
+  "reference_count": 40,
+  "cases": 64,
+  "correct": 57,
+  "accuracy": 0.890625,
+  "macro_f1": 0.896759,
+  "per_class": {
+    "MOVE_FORWARD": {
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.933333,
+      "support": 8
+    },
+    "MOVE_BACKWARD": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888889,
+      "support": 8
+    },
+    "TURN_LEFT": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "support": 8
+    },
+    "TURN_RIGHT": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "support": 8
+    },
+    "STOP": {
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.933333,
+      "support": 8
+    },
+    "UNKNOWN": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "support": 24
+    }
+  },
+  "confusion_matrix": {
+    "MOVE_FORWARD": {
+      "MOVE_FORWARD": 7,
+      "MOVE_BACKWARD": 1,
+      "TURN_LEFT": 0,
+      "TURN_RIGHT": 0,
+      "STOP": 0,
+      "UNKNOWN": 0
+    },
+    "MOVE_BACKWARD": {
+      "MOVE_FORWARD": 0,
+      "MOVE_BACKWARD": 8,
+      "TURN_LEFT": 0,
+      "TURN_RIGHT": 0,
+      "STOP": 0,
+      "UNKNOWN": 0
+    },
+    "TURN_LEFT": {
+      "MOVE_FORWARD": 0,
+      "MOVE_BACKWARD": 0,
+      "TURN_LEFT": 7,
+      "TURN_RIGHT": 0,
+      "STOP": 0,
+      "UNKNOWN": 1
+    },
+    "TURN_RIGHT": {
+      "MOVE_FORWARD": 0,
+      "MOVE_BACKWARD": 0,
+      "TURN_LEFT": 0,
+      "TURN_RIGHT": 7,
+      "STOP": 0,
+      "UNKNOWN": 1
+    },
+    "STOP": {
+      "MOVE_FORWARD": 0,
+      "MOVE_BACKWARD": 0,
+      "TURN_LEFT": 0,
+      "TURN_RIGHT": 0,
+      "STOP": 7,
+      "UNKNOWN": 1
+    },
+    "UNKNOWN": {
+      "MOVE_FORWARD": 0,
+      "MOVE_BACKWARD": 1,
+      "TURN_LEFT": 1,
+      "TURN_RIGHT": 1,
+      "STOP": 0,
+      "UNKNOWN": 21
+    }
+  },
+  "predictions": [
+    {
+      "id": "forward_01",
+      "text": "Please go straight",
+      "label": "MOVE_FORWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Please go straight",
+        "action": "MOVE_FORWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.805465,
+        "margin": 0.264097,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "go straight ahead",
+        "scores": {
+          "MOVE_FORWARD": 0.805465,
+          "MOVE_BACKWARD": 0.541368,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "forward_02",
+      "text": "Keep going ahead",
+      "label": "MOVE_FORWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Keep going ahead",
+        "action": "MOVE_FORWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.592643,
+        "margin": 0.592643,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "go straight ahead",
+        "scores": {
+          "MOVE_FORWARD": 0.592643,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "forward_03",
+      "text": "Can you advance a little?",
+      "label": "MOVE_FORWARD",
+      "category": "polite_command",
+      "prediction": {
+        "instruction": "Can you advance a little?",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.507267,
+        "margin": 0.087452,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "back up a little",
+        "scores": {
+          "MOVE_FORWARD": 0.419815,
+          "MOVE_BACKWARD": 0.507267,
+          "TURN_LEFT": 0.17347,
+          "TURN_RIGHT": 0.17347,
+          "STOP": 0.121771
+        }
+      }
+    },
+    {
+      "id": "forward_04",
+      "text": "Proceed forward please",
+      "label": "MOVE_FORWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Proceed forward please",
+        "action": "MOVE_FORWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.491952,
+        "margin": 0.491952,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "move forward",
+        "scores": {
+          "MOVE_FORWARD": 0.491952,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "forward_05",
+      "text": "Walk ahead slowly",
+      "label": "MOVE_FORWARD",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Walk ahead slowly",
+        "action": "MOVE_FORWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.601445,
+        "margin": 0.193197,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "walk in a straight line ahead",
+        "scores": {
+          "MOVE_FORWARD": 0.601445,
+          "MOVE_BACKWARD": 0.408248,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "forward_06",
+      "text": "Move straight on for a bit",
+      "label": "MOVE_FORWARD",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Move straight on for a bit",
+        "action": "MOVE_FORWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.622408,
+        "margin": 0.303027,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "proceed straight on",
+        "scores": {
+          "MOVE_FORWARD": 0.622408,
+          "MOVE_BACKWARD": 0.319381,
+          "TURN_LEFT": 0.16129,
+          "TURN_RIGHT": 0.16129,
+          "STOP": 0.253007
+        }
+      }
+    },
+    {
+      "id": "forward_07",
+      "text": "Take one step forwards",
+      "label": "MOVE_FORWARD",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Take one step forwards",
+        "action": "MOVE_FORWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.507262,
+        "margin": 0.13456,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "continue forwards",
+        "scores": {
+          "MOVE_FORWARD": 0.507262,
+          "MOVE_BACKWARD": 0.288237,
+          "TURN_LEFT": 0.372702,
+          "TURN_RIGHT": 0.372702,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "forward_08",
+      "text": "Continue in the forward direction",
+      "label": "MOVE_FORWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Continue in the forward direction",
+        "action": "MOVE_FORWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.40178,
+        "margin": 0.121292,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "continue forwards",
+        "scores": {
+          "MOVE_FORWARD": 0.40178,
+          "MOVE_BACKWARD": 0.280488,
+          "TURN_LEFT": 0.274259,
+          "TURN_RIGHT": 0.274259,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "backward_01",
+      "text": "Reverse please",
+      "label": "MOVE_BACKWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Reverse please",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.604414,
+        "margin": 0.604414,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "reverse two steps",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.604414,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "backward_02",
+      "text": "Could you back up?",
+      "label": "MOVE_BACKWARD",
+      "category": "polite_command",
+      "prediction": {
+        "instruction": "Could you back up?",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.743923,
+        "margin": 0.743923,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "back up a little",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.743923,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "backward_03",
+      "text": "Please take a step backward",
+      "label": "MOVE_BACKWARD",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Please take a step backward",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.550878,
+        "margin": 0.044487,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "move backward",
+        "scores": {
+          "MOVE_FORWARD": 0.383918,
+          "MOVE_BACKWARD": 0.550878,
+          "TURN_LEFT": 0.506391,
+          "TURN_RIGHT": 0.506391,
+          "STOP": 0.133755
+        }
+      }
+    },
+    {
+      "id": "backward_04",
+      "text": "Retreat a short distance",
+      "label": "MOVE_BACKWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Retreat a short distance",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.637728,
+        "margin": 0.409202,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "retreat backwards",
+        "scores": {
+          "MOVE_FORWARD": 0.173256,
+          "MOVE_BACKWARD": 0.637728,
+          "TURN_LEFT": 0.228526,
+          "TURN_RIGHT": 0.228526,
+          "STOP": 0.160419
+        }
+      }
+    },
+    {
+      "id": "backward_05",
+      "text": "Move in the reverse direction",
+      "label": "MOVE_BACKWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Move in the reverse direction",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.588706,
+        "margin": 0.270911,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "walk in reverse",
+        "scores": {
+          "MOVE_FORWARD": 0.317795,
+          "MOVE_BACKWARD": 0.588706,
+          "TURN_LEFT": 0.287816,
+          "TURN_RIGHT": 0.287816,
+          "STOP": 0.23701
+        }
+      }
+    },
+    {
+      "id": "backward_06",
+      "text": "Go backwards slowly",
+      "label": "MOVE_BACKWARD",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Go backwards slowly",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.520273,
+        "margin": 0.101211,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "go back",
+        "scores": {
+          "MOVE_FORWARD": 0.419062,
+          "MOVE_BACKWARD": 0.520273,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "backward_07",
+      "text": "Walk a little way back",
+      "label": "MOVE_BACKWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Walk a little way back",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.693718,
+        "margin": 0.366622,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "back up a little",
+        "scores": {
+          "MOVE_FORWARD": 0.327096,
+          "MOVE_BACKWARD": 0.693718,
+          "TURN_LEFT": 0.157759,
+          "TURN_RIGHT": 0.157759,
+          "STOP": 0.110743
+        }
+      }
+    },
+    {
+      "id": "backward_08",
+      "text": "Step back please",
+      "label": "MOVE_BACKWARD",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Step back please",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.677223,
+        "margin": 0.677223,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "go back",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.677223,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "left_01",
+      "text": "Please turn to your left",
+      "label": "TURN_LEFT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Please turn to your left",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.716511,
+        "margin": 0.174903,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "pivot to your left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.716511,
+          "TURN_RIGHT": 0.541608,
+          "STOP": 0.289917
+        }
+      }
+    },
+    {
+      "id": "left_02",
+      "text": "Could you rotate left?",
+      "label": "TURN_LEFT",
+      "category": "polite_command",
+      "prediction": {
+        "instruction": "Could you rotate left?",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.687832,
+        "margin": 0.224504,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "rotate to the left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.687832,
+          "TURN_RIGHT": 0.463329,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "left_03",
+      "text": "Make a turn towards the left side",
+      "label": "TURN_LEFT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Make a turn towards the left side",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.715548,
+        "margin": 0.13783,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "make a left-hand turn",
+        "scores": {
+          "MOVE_FORWARD": 0.119832,
+          "MOVE_BACKWARD": 0.122253,
+          "TURN_LEFT": 0.715548,
+          "TURN_RIGHT": 0.577718,
+          "STOP": 0.110953
+        }
+      }
+    },
+    {
+      "id": "left_04",
+      "text": "Pivot left a little",
+      "label": "TURN_LEFT",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Pivot left a little",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.487026,
+        "margin": 0.004137,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "back up a little",
+        "scores": {
+          "MOVE_FORWARD": 0.126268,
+          "MOVE_BACKWARD": 0.487026,
+          "TURN_LEFT": 0.482889,
+          "TURN_RIGHT": 0.325278,
+          "STOP": 0.116912
+        }
+      }
+    },
+    {
+      "id": "left_05",
+      "text": "Steer towards your left",
+      "label": "TURN_LEFT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Steer towards your left",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.797919,
+        "margin": 0.260435,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "steer left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.797919,
+          "TURN_RIGHT": 0.537484,
+          "STOP": 0.304439
+        }
+      }
+    },
+    {
+      "id": "left_06",
+      "text": "Turn ninety degrees left",
+      "label": "TURN_LEFT",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Turn ninety degrees left",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 1.0,
+        "margin": 0.452546,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "turn left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 1.0,
+          "TURN_RIGHT": 0.547454,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "left_07",
+      "text": "Face the left side",
+      "label": "TURN_LEFT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Face the left side",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.772989,
+        "margin": 0.252298,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "face left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.772989,
+          "TURN_RIGHT": 0.520691,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "left_08",
+      "text": "Please make a left turn",
+      "label": "TURN_LEFT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Please make a left turn",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.845901,
+        "margin": 0.162939,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "make a left-hand turn",
+        "scores": {
+          "MOVE_FORWARD": 0.141661,
+          "MOVE_BACKWARD": 0.144524,
+          "TURN_LEFT": 0.845901,
+          "TURN_RIGHT": 0.682962,
+          "STOP": 0.131165
+        }
+      }
+    },
+    {
+      "id": "right_01",
+      "text": "Please turn to your right",
+      "label": "TURN_RIGHT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Please turn to your right",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.716511,
+        "margin": 0.174903,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "pivot to your right",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.541608,
+          "TURN_RIGHT": 0.716511,
+          "STOP": 0.289917
+        }
+      }
+    },
+    {
+      "id": "right_02",
+      "text": "Could you rotate right?",
+      "label": "TURN_RIGHT",
+      "category": "polite_command",
+      "prediction": {
+        "instruction": "Could you rotate right?",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.687832,
+        "margin": 0.224504,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "rotate to the right",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.463329,
+          "TURN_RIGHT": 0.687832,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "right_03",
+      "text": "Make a turn towards the right side",
+      "label": "TURN_RIGHT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Make a turn towards the right side",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.715548,
+        "margin": 0.13783,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "make a right-hand turn",
+        "scores": {
+          "MOVE_FORWARD": 0.119832,
+          "MOVE_BACKWARD": 0.122253,
+          "TURN_LEFT": 0.577718,
+          "TURN_RIGHT": 0.715548,
+          "STOP": 0.110953
+        }
+      }
+    },
+    {
+      "id": "right_04",
+      "text": "Pivot right a little",
+      "label": "TURN_RIGHT",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Pivot right a little",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.487026,
+        "margin": 0.004137,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "back up a little",
+        "scores": {
+          "MOVE_FORWARD": 0.126268,
+          "MOVE_BACKWARD": 0.487026,
+          "TURN_LEFT": 0.325278,
+          "TURN_RIGHT": 0.482889,
+          "STOP": 0.116912
+        }
+      }
+    },
+    {
+      "id": "right_05",
+      "text": "Steer towards your right",
+      "label": "TURN_RIGHT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Steer towards your right",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.797919,
+        "margin": 0.260435,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "steer right",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.537484,
+          "TURN_RIGHT": 0.797919,
+          "STOP": 0.304439
+        }
+      }
+    },
+    {
+      "id": "right_06",
+      "text": "Turn ninety degrees right",
+      "label": "TURN_RIGHT",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Turn ninety degrees right",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 1.0,
+        "margin": 0.452546,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "turn right",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.547454,
+          "TURN_RIGHT": 1.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "right_07",
+      "text": "Face the right side",
+      "label": "TURN_RIGHT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Face the right side",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.772989,
+        "margin": 0.252298,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "face right",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.520691,
+          "TURN_RIGHT": 0.772989,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "right_08",
+      "text": "Please make a right turn",
+      "label": "TURN_RIGHT",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Please make a right turn",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.845901,
+        "margin": 0.162939,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "make a right-hand turn",
+        "scores": {
+          "MOVE_FORWARD": 0.141661,
+          "MOVE_BACKWARD": 0.144524,
+          "TURN_LEFT": 0.682962,
+          "TURN_RIGHT": 0.845901,
+          "STOP": 0.131165
+        }
+      }
+    },
+    {
+      "id": "stop_01",
+      "text": "Halt now please",
+      "label": "STOP",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Halt now please",
+        "action": "STOP",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.707107,
+        "margin": 0.707107,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "STOP",
+        "matched_example": "halt",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.707107
+        }
+      }
+    },
+    {
+      "id": "stop_02",
+      "text": "Please stop moving",
+      "label": "STOP",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Please stop moving",
+        "action": "STOP",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.525811,
+        "margin": 0.525811,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "STOP",
+        "matched_example": "cease moving",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.525811
+        }
+      }
+    },
+    {
+      "id": "stop_03",
+      "text": "Stay where you are",
+      "label": "STOP",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Stay where you are",
+        "action": "STOP",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.707107,
+        "margin": 0.707107,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "STOP",
+        "matched_example": "stay still",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.707107
+        }
+      }
+    },
+    {
+      "id": "stop_04",
+      "text": "Remain in the same spot",
+      "label": "STOP",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Remain in the same spot",
+        "action": "STOP",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.437108,
+        "margin": 0.116204,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "STOP",
+        "matched_example": "remain stationary",
+        "scores": {
+          "MOVE_FORWARD": 0.236383,
+          "MOVE_BACKWARD": 0.320903,
+          "TURN_LEFT": 0.313777,
+          "TURN_RIGHT": 0.313777,
+          "STOP": 0.437108
+        }
+      }
+    },
+    {
+      "id": "stop_05",
+      "text": "Keep completely still",
+      "label": "STOP",
+      "category": "modifier",
+      "prediction": {
+        "instruction": "Keep completely still",
+        "action": "STOP",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.707107,
+        "margin": 0.707107,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "STOP",
+        "matched_example": "stay still",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.707107
+        }
+      }
+    },
+    {
+      "id": "stop_06",
+      "text": "Bring yourself to a halt",
+      "label": "STOP",
+      "category": "paraphrase",
+      "prediction": {
+        "instruction": "Bring yourself to a halt",
+        "action": "STOP",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.727821,
+        "margin": 0.480374,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "STOP",
+        "matched_example": "halt",
+        "scores": {
+          "MOVE_FORWARD": 0.147036,
+          "MOVE_BACKWARD": 0.150007,
+          "TURN_LEFT": 0.247447,
+          "TURN_RIGHT": 0.247447,
+          "STOP": 0.727821
+        }
+      }
+    },
+    {
+      "id": "stop_07",
+      "text": "Please do not move",
+      "label": "STOP",
+      "category": "supported_stop_negation",
+      "prediction": {
+        "instruction": "Please do not move",
+        "action": "STOP",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 1.0,
+        "margin": 0.657954,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "STOP",
+        "matched_example": "do not move",
+        "scores": {
+          "MOVE_FORWARD": 0.342046,
+          "MOVE_BACKWARD": 0.322018,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 1.0
+        }
+      }
+    },
+    {
+      "id": "stop_08",
+      "text": "Don't move!",
+      "label": "STOP",
+      "category": "supported_stop_negation",
+      "prediction": {
+        "instruction": "Don't move!",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.677223,
+        "margin": 0.039652,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "move forward",
+        "scores": {
+          "MOVE_FORWARD": 0.677223,
+          "MOVE_BACKWARD": 0.637571,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.505071
+        }
+      }
+    },
+    {
+      "id": "unknown_01",
+      "text": "Make me a sandwich",
+      "label": "UNKNOWN",
+      "category": "unrelated",
+      "prediction": {
+        "instruction": "Make me a sandwich",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.641079,
+        "margin": 0.0,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "make a left-hand turn",
+        "scores": {
+          "MOVE_FORWARD": 0.186922,
+          "MOVE_BACKWARD": 0.190699,
+          "TURN_LEFT": 0.641079,
+          "TURN_RIGHT": 0.641079,
+          "STOP": 0.173072
+        }
+      }
+    },
+    {
+      "id": "unknown_02",
+      "text": "What is the weather today?",
+      "label": "UNKNOWN",
+      "category": "unrelated",
+      "prediction": {
+        "instruction": "What is the weather today?",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.564528,
+        "margin": 0.0,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "rotate to the left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.564528,
+          "TURN_RIGHT": 0.564528,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "unknown_03",
+      "text": "Open the kitchen window",
+      "label": "UNKNOWN",
+      "category": "unsupported_action",
+      "prediction": {
+        "instruction": "Open the kitchen window",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.564528,
+        "margin": 0.0,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "rotate to the left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.564528,
+          "TURN_RIGHT": 0.564528,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "unknown_04",
+      "text": "Take a photo of the room",
+      "label": "UNKNOWN",
+      "category": "unsupported_action",
+      "prediction": {
+        "instruction": "Take a photo of the room",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.533171,
+        "margin": 0.0,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "take a left turn",
+        "scores": {
+          "MOVE_FORWARD": 0.404221,
+          "MOVE_BACKWARD": 0.41234,
+          "TURN_LEFT": 0.533171,
+          "TURN_RIGHT": 0.533171,
+          "STOP": 0.140828
+        }
+      }
+    },
+    {
+      "id": "unknown_05",
+      "text": "Play some music",
+      "label": "UNKNOWN",
+      "category": "unrelated",
+      "prediction": {
+        "instruction": "Play some music",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_similarity",
+        "similarity": 0.0,
+        "margin": 0.0,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "move forward",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "unknown_06",
+      "text": "Pick up the red cup",
+      "label": "UNKNOWN",
+      "category": "unsupported_action",
+      "prediction": {
+        "instruction": "Pick up the red cup",
+        "action": "MOVE_BACKWARD",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.426171,
+        "margin": 0.048719,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_BACKWARD",
+        "matched_example": "back up a little",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.426171,
+          "TURN_LEFT": 0.377452,
+          "TURN_RIGHT": 0.377452,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "unknown_07",
+      "text": "The meeting starts at noon",
+      "label": "UNKNOWN",
+      "category": "unrelated",
+      "prediction": {
+        "instruction": "The meeting starts at noon",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_margin",
+        "similarity": 0.564528,
+        "margin": 0.0,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "rotate to the left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.564528,
+          "TURN_RIGHT": 0.564528,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "unknown_08",
+      "text": "Translate this paragraph into French",
+      "label": "UNKNOWN",
+      "category": "unrelated",
+      "prediction": {
+        "instruction": "Translate this paragraph into French",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "low_similarity",
+        "similarity": 0.0,
+        "margin": 0.0,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "MOVE_FORWARD",
+        "matched_example": "move forward",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.0,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "unknown_09",
+      "text": "Do not turn left",
+      "label": "UNKNOWN",
+      "category": "negation",
+      "prediction": {
+        "instruction": "Do not turn left",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "unsupported_negation",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_10",
+      "text": "Don't go forward",
+      "label": "UNKNOWN",
+      "category": "negation",
+      "prediction": {
+        "instruction": "Don't go forward",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "unsupported_negation",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_11",
+      "text": "Never reverse",
+      "label": "UNKNOWN",
+      "category": "negation",
+      "prediction": {
+        "instruction": "Never reverse",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "unsupported_negation",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_12",
+      "text": "Turn right without moving",
+      "label": "UNKNOWN",
+      "category": "negation",
+      "prediction": {
+        "instruction": "Turn right without moving",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "unsupported_negation",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_13",
+      "text": "Avoid turning to your left",
+      "label": "UNKNOWN",
+      "category": "negation",
+      "prediction": {
+        "instruction": "Avoid turning to your left",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "unsupported_negation",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_14",
+      "text": "You mustn't move backwards",
+      "label": "UNKNOWN",
+      "category": "negation",
+      "prediction": {
+        "instruction": "You mustn't move backwards",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "unsupported_negation",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_15",
+      "text": "Turn left and then turn right",
+      "label": "UNKNOWN",
+      "category": "multi_action",
+      "prediction": {
+        "instruction": "Turn left and then turn right",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "multiple_actions",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_16",
+      "text": "Move forward then stop",
+      "label": "UNKNOWN",
+      "category": "multi_action",
+      "prediction": {
+        "instruction": "Move forward then stop",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "multiple_actions",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_17",
+      "text": "Go backwards, turn left",
+      "label": "UNKNOWN",
+      "category": "multi_action",
+      "prediction": {
+        "instruction": "Go backwards, turn left",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "multiple_actions",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_18",
+      "text": "First turn right; next halt",
+      "label": "UNKNOWN",
+      "category": "multi_action",
+      "prediction": {
+        "instruction": "First turn right; next halt",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "multiple_actions",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_19",
+      "text": "Advance before turning left",
+      "label": "UNKNOWN",
+      "category": "multi_action",
+      "prediction": {
+        "instruction": "Advance before turning left",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "multiple_actions",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_20",
+      "text": "Turn left or right",
+      "label": "UNKNOWN",
+      "category": "ambiguous",
+      "prediction": {
+        "instruction": "Turn left or right",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "ambiguous_instruction",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_21",
+      "text": "Maybe go forward",
+      "label": "UNKNOWN",
+      "category": "ambiguous",
+      "prediction": {
+        "instruction": "Maybe go forward",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "ambiguous_instruction",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_22",
+      "text": "If the path is clear go ahead",
+      "label": "UNKNOWN",
+      "category": "conditional",
+      "prediction": {
+        "instruction": "If the path is clear go ahead",
+        "action": "UNKNOWN",
+        "accepted": false,
+        "reason": "ambiguous_instruction",
+        "similarity": null,
+        "margin": null,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline"
+      }
+    },
+    {
+      "id": "unknown_23",
+      "text": "Right is the correct answer",
+      "label": "UNKNOWN",
+      "category": "non_command_direction_word",
+      "prediction": {
+        "instruction": "Right is the correct answer",
+        "action": "TURN_RIGHT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.687832,
+        "margin": 0.224504,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_RIGHT",
+        "matched_example": "rotate to the right",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.463329,
+          "TURN_RIGHT": 0.687832,
+          "STOP": 0.0
+        }
+      }
+    },
+    {
+      "id": "unknown_24",
+      "text": "I left my keys at home",
+      "label": "UNKNOWN",
+      "category": "non_command_direction_word",
+      "prediction": {
+        "instruction": "I left my keys at home",
+        "action": "TURN_LEFT",
+        "accepted": true,
+        "reason": "accepted",
+        "similarity": 0.672715,
+        "margin": 0.672715,
+        "backend": "baseline",
+        "model": "tf-idf-reference-baseline",
+        "nearest_action": "TURN_LEFT",
+        "matched_example": "turn left",
+        "scores": {
+          "MOVE_FORWARD": 0.0,
+          "MOVE_BACKWARD": 0.0,
+          "TURN_LEFT": 0.672715,
+          "TURN_RIGHT": 0.0,
+          "STOP": 0.0
+        }
+      }
+    }
+  ],
+  "note": "Small hand-written held-out suite, not a generalization or robot-safety benchmark. Thresholds are fixed defaults, not optimized on these cases."
+}
